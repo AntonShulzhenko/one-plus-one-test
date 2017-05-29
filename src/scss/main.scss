@@ -5,7 +5,9 @@
 @import 'base/fonts';
 @import 'base/base';
 
+@import 'layouts/header';
 @import 'layouts/main';
 @import 'layouts/footer';
 
+@import 'components/sub-nav';
 @import 'components/media';

@@ -9,8 +9,9 @@
   flex-wrap: $fw;
 }
 
-@mixin font($size: $fs, $fw: 400, $f-style: normal, $color: $white, $lh: $lh) {
+@mixin font($size: $f-size, $fw: 400, $f-style: normal, $color: $white, $lh: $lh) {
   font: {
+    family: $ff;
     size: $size;
     weight: $fw;
     style: $f-style;

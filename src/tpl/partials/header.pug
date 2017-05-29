@@ -1,1 +1,33 @@
-p header
+header.header
+  .header__top
+    .header__left
+      a.header__logo(href="#") 1+1
+      
+      nav.header__nav
+        ul
+          each li in haderNav
+            li
+              a.header__text(href="#") #{li}
+      
+    .header__right
+      .header__search.header__icon-block
+        span.header__text.header__search-text Пошук
+        
+      .header__lang.header__icon-block
+        a.header__text.header__lang-item.active(href="#") Укр
+        a.header__text.header__lang-item(href="#") Рус
+        
+      .header__auth.header__icon-block
+        a.header__text(href="#") Вхід
+    
+    form.search-form
+      input.search-form__input(type="text", placeholder="Почніть пошук...")
+      span.search-form__close x
+    
+  .header__bottom
+    ul.sub-nav
+      each li in subNav
+        li.sub-nav__item
+          a(href="#") #{li.link}
+            i
+              img(src=`${li.icon}`, alt="")

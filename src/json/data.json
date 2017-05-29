@@ -1,5 +1,24 @@
 {
   "pageTitle": "1+1 Test",
+  "haderNav": ["Телепрограма", "1+1 онлайн", "Новини", "Відео"],
+  "subNav": [
+    {
+      "link": "Програми",
+      "icon": "img/sn-1.png"
+    },
+    {
+      "link": "Серіали",
+      "icon": "img/sn-2.png"
+    },
+    {
+      "link": "Фільми",
+      "icon": "img/sn-3.png"
+    },
+    {
+      "link": "Ведучі",
+      "icon": "img/sn-4.png"
+    }
+  ],
   "media": [
     {
       "img": "img/tsn.png",
