@@ -165,7 +165,7 @@ gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['styles']);
   gulp.watch(['src/js/**/*.js'], ['scripts', 'lint']);
   gulp.watch('src/json/data.json', ['pug']);
-  gulp.watch('src/tpl/*.pug', ['pug']);
+  gulp.watch('src/tpl/**/*.pug', ['pug']);
 });
 
 

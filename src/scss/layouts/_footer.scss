@@ -1,0 +1,43 @@
+.footer {
+  width: 100%;
+  padding: 56px 56px 72px;
+  background-color: $black;
+
+  &__nav {
+    @include flex(center, center, nowrap);
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+
+    li {
+      padding: 0 32px;
+      border-right: 1px solid #888;
+      line-height: 1;
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    a {
+      display: inline-block;
+      @include font(16px, 300, normal, $white, 1);
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 1px solid transparent;
+      @include trans();
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+        color: $white;
+        border-color: $white;
+      }
+    }
+  }
+
+  &__copy {
+    @include font(12px, 300, normal, $grey, 20px);
+    margin: 0 auto;
+    text-align: center;
+  }
+}

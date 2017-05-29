@@ -1,0 +1,20 @@
+@mixin trans($prop: all, $dur: 150ms, $easing: $easing) {
+  transition: $prop $dur $easing;
+}
+
+@mixin flex($jc: space-between, $ai: center, $fw: nowrap) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $fw;
+}
+
+@mixin font($size: $fs, $fw: 400, $f-style: normal, $color: $white, $lh: $lh) {
+  font: {
+    size: $size;
+    weight: $fw;
+    style: $f-style;
+  }
+  color: $color;
+  line-height: $lh;
+}

@@ -1,0 +1,10 @@
+.media {
+  @include flex(space-between, center, nowrap);
+  width: 100%;
+  margin-bottom: 64px;
+
+  &__item {
+    display: block;
+    line-height: 1;
+  }
+}

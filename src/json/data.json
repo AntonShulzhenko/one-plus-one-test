@@ -1,3 +1,38 @@
 {
-  "pageTitle": "1+1 test"
+  "pageTitle": "1+1 Test",
+  "media": [
+    {
+      "img": "img/tsn.png",
+      "alt": "ТСН"
+    },
+    {
+      "img": "img/tet.png",
+      "alt": "ТЕТ"
+    },
+    {
+      "img": "img/2plus2.png",
+      "alt": "2+2"
+    },
+    {
+      "img": "img/plus-plus.png",
+      "alt": "Плюс Плюс"
+    },
+    {
+      "img": "img/ut.png",
+      "alt": "Ukraine Today"
+    },
+    {
+      "img": "img/one-plus-one-int.png",
+      "alt": "1+1 International"
+    },
+    {
+      "img": "img/bigudi.png",
+      "alt": "Бігуді"
+    },
+    {
+      "img": "img/unian.png",
+      "alt": "Уніан"
+    }
+  ],
+  "footerNav": ["Про канал", "Реклама", "Проблеми з прийомом каналу 1+1", "Каталог програм"]
 }

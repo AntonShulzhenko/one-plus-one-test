@@ -1,0 +1,12 @@
+footer.footer
+  .media
+    each item in media
+      a.media__item(href="#")
+        img(src=`${item.img}`, alt=`${item.alt}`)
+          
+  ul.footer__nav
+    each li in footerNav
+      li
+        a(href="#") #{li}
+        
+  p.footer__copy «1+1 Медіа» тел. : +38 (044) 585-80-86

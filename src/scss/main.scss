@@ -1,3 +1,11 @@
-@import 'vars';
-@import 'fonts';
-@import 'base';
+@import 'base/vars';
+
+@import 'utils/mixins';
+
+@import 'base/fonts';
+@import 'base/base';
+
+@import 'layouts/main';
+@import 'layouts/footer';
+
+@import 'components/media';
