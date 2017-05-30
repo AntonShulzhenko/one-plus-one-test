@@ -1,0 +1,6 @@
+.calendar
+  each item in calendar
+    div(class=item.active ? 'calendar__item active' : 'calendar__item')
+      a.calendar__link(href="#")
+        span.calendar__day #{item.day}
+        span.calendar__date #{item.date}

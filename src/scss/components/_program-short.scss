@@ -1,0 +1,99 @@
+.program-short {
+  @include flex(flex-start, stretch, nowrap);
+  padding: 40px 104px 40px 0;
+  background-color: $white;
+  &.premiere {
+    .sign {
+      background-color: $orange;
+    }
+  }
+
+  &__time {
+    @include flex(center, center, nowrap);
+    flex-direction: column;
+    width: 325px;
+    min-width: 325px;
+    position: relative;
+
+    .time {
+      @include font(60px, 900, normal, $black, 1);
+    }
+
+    .sign {
+      @include font(15px, 300, normal, $white, 1);
+      padding: 6px 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__container {
+    @include flex(flex-start, stretch, nowrap);
+  }
+
+  &__preview {
+    margin-right: 24px;
+  }
+
+  &__content {
+    padding-top: 10px;
+  }
+
+  &__title {
+    @include font(36px, 300, normal, $black, 1);
+    text-decoration: none;
+    @include trans();
+    &:hover,
+    &:focus,
+    &:active {
+      color: $red;
+    }
+  }
+
+  &__tags {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    a {
+      display: inline-block;
+      margin-right: 20px;
+      padding: 6px 14px;
+      border-radius: 5px;
+      border: 1px solid $red;
+      @include font(16px, 300, normal, $red, 1);
+      text-decoration: none;
+      @include trans();
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $red;
+        color: $white;
+        &.on-line {
+          &::before {
+            background-color: $white;
+          }
+        }
+      }
+
+      &.on-line {
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $red;
+          vertical-align: top;
+          margin-top: 4px;
+          margin-right: 8px;
+          @include trans();
+        }
+      }
+    }
+  }
+
+  &__excerpt {
+    @include font(18px, 300, normal, $black, 25px);
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
