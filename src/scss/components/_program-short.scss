@@ -3,6 +3,15 @@
   padding: 40px 104px 40px 0;
   background-color: $white;
   overflow: hidden;
+  @media (max-width: 1440px) {
+    padding: 20px 60px 20px 0;
+  }
+  @media (max-width: 1280px) {
+    padding-right: 40px;
+  }
+  @media (max-width: 1280px) {
+    padding: 10px 20px 10px 0;
+  }
   &.close {
     height: 0;
     padding: 0;
@@ -52,6 +61,40 @@
       padding: 6px 10px;
       margin-bottom: 10px;
     }
+
+    @media (max-width: 1440px) {
+      width: 240px;
+      min-width: 240px;
+
+      .time {
+        font-size: 40px;
+      }
+
+      .sign {
+        font-size: 12px;
+        padding: 4px 8px;
+      }
+    }
+    @media (max-width: 1024px) {
+      width: 160px;
+      min-width: 160px;
+    }
+    @media (max-width: 768px) {
+      .time {
+        font-size: 32px;
+      }
+    }
+    @media (max-width: 540px) {
+      width: 100px;
+      min-width: 100px;
+      .time {
+        font-size: 20px;
+      }
+      .sign {
+        font-size: 10px;
+        padding: 2px 4px;
+      }
+    }
   }
 
   &__container {
@@ -89,6 +132,10 @@
       object-fit: cover;
       object-position: center;
     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__title {
@@ -99,6 +146,14 @@
     &:focus,
     &:active {
       color: $red;
+    }
+
+    @media (max-width: 1440px) {
+      font-size: 30px;
+    }
+    @media (max-width: 540px) {
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 
@@ -139,6 +194,23 @@
           margin-top: 4px;
           margin-right: 8px;
           @include trans();
+          @media (max-width: 1440px) {
+            margin-top: 2px;
+          }
+        }
+      }
+
+      @media (max-width: 1440px) {
+        padding: 4px 8px;
+        font-size: 14px;
+      }
+      @media (max-width: 1024px) {
+        margin-right: 10px;
+      }
+      @media (max-width: 768px) {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
@@ -148,5 +220,11 @@
     @include font(18px, 300, normal, $black, 25px);
     margin-bottom: 0;
     margin-top: 0;
+    @media (max-width: 1440px) {
+      font-size: 16px;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }

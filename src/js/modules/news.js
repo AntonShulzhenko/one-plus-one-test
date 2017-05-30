@@ -14,6 +14,14 @@
       programShort.addClass('close');
       programFull.addClass('open');
 
+      if (programFull.parent().index() === programsItem.length - 1) {
+        programFull.parent().find('.program-full__time-switcher .control.after').css('display', 'none');
+      }
+
+      if (programFull.parent().index() === 0) {
+        programFull.parent().find('.program-full__time-switcher .control.before').css('display', 'none');
+      }
+
       e.preventDefault();
     });
 
@@ -31,7 +39,6 @@
       programFull.parent().next().find('.program-short').addClass('close');
 
       if (programFull.parent().next().index() === programsItem.length - 1) {
-        console.log($(this));
         programFull.parent().next().find('.program-full__time-switcher .control.after').css('display', 'none');
       }
 
@@ -45,7 +52,6 @@
       programFull.parent().prev().find('.program-short').addClass('close');
 
       if (programFull.parent().prev().index() === 0) {
-        console.log($(this));
         programFull.parent().prev().find('.program-full__time-switcher .control.before').css('display', 'none');
       }
 
