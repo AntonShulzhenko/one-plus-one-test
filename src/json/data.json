@@ -77,6 +77,75 @@
       "lg": false
     }
   ],
+  "calendar": [
+    {
+      "day": "Пн",
+      "date": "Вчора",
+      "active": false
+    },
+    {
+      "day": "Вт",
+      "date": "Сьогодні",
+      "active": false
+    },
+    {
+      "day": "Ср",
+      "date": "Завтра",
+      "active": true
+    },
+    {
+      "day": "Чт",
+      "date": "29 Серпня",
+      "active": false
+    },
+    {
+      "day": "Пт",
+      "date": "30 Серпня",
+      "active": false
+    },
+    {
+      "day": "Сб",
+      "date": "31 Серпня",
+      "active": false
+    },
+    {
+      "day": "Нд",
+      "date": "1 Вересня",
+      "active": false
+    },
+    {
+      "day": "Пн",
+      "date": "2 Вересня",
+      "active": false
+    },
+    {
+      "day": "Вт",
+      "date": "3 Вересня",
+      "active": false
+    }
+  ],
+  "newsFilter": [
+    {
+      "link": "Сьогодні",
+      "active": false
+    },
+    {
+      "link": "Програми",
+      "active": false
+    },
+    {
+      "link": "Серіали",
+      "active": true
+    },
+    {
+      "link": "Фільми",
+      "active": false
+    },
+    {
+      "link": "Новини",
+      "active": false
+    }
+  ],
   "media": [
     {
       "img": "img/tsn.png",

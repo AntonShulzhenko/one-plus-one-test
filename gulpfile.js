@@ -79,9 +79,9 @@ gulp.task('styles', () => {
 });
 
 
-gulp.task('scripts', () => {
+const bundleScripts = (src) => {
   return gulp
-    .src('src/js/main.js')
+    .src(src)
     .pipe(errorHandler())
     .pipe(sourcemaps.init())
     .pipe(include({
@@ -92,7 +92,23 @@ gulp.task('scripts', () => {
     }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('public/js'));
+};
+
+
+gulp.task('scripts:vendor', () => {
+  return bundleScripts('src/js/vendor.js');
 });
+
+
+gulp.task('scripts:main', () => {
+  return bundleScripts('src/js/main.js');
+});
+
+
+gulp.task('scripts', [
+  'scripts:vendor',
+  'scripts:main'
+]);
 
 
 gulp.task('lint', () => {
