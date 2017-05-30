@@ -2,6 +2,11 @@
   @include flex(flex-start, stretch, nowrap);
   background-color: $black;
   position: relative;
+  overflow: hidden;
+  height: 0;
+  &.open {
+    height: auto;
+  }
 
   &__time {
     @include flex(flex-start, center, nowrap);

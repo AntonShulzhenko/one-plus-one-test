@@ -2,6 +2,11 @@
   @include flex(flex-start, stretch, nowrap);
   padding: 40px 104px 40px 0;
   background-color: $white;
+  overflow: hidden;
+  &.close {
+    height: 0;
+    padding: 0;
+  }
   &.premiere {
     .sign {
       background-color: $orange;

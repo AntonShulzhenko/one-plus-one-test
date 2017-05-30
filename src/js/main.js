@@ -1,1 +1,1 @@
-//=require 'modules/calendar.js'
+//=require 'modules/*.js'
