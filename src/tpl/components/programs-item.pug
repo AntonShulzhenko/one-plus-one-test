@@ -1,0 +1,69 @@
+- var itemClass = ''
+
+each item in programs
+  if item.short.premiere
+    - itemClass = 'premiere'
+  else if item.short.online
+    - itemClass = 'online'
+  else
+    - itemClass = ''
+    
+  .programs__item
+    div(class='program-short ' + itemClass)
+      .program-short__time
+        if item.short.premiere
+          span.sign #{item.short.premiereText}
+        else if item.short.online
+          span.sign #{item.short.onlineText}
+          
+        span.time #{item.short.time}
+      
+      .program-short__container
+        a.program-short__preview.play(href="#")
+          img(src="img/program-short.png", alt=`${item.short.title}`)
+            
+        .program-short__content
+          a.program-short__title(href="#") #{item.short.title}
+          
+          .program-short__tags
+            each tag in item.short.tags
+              a(class=tag.online ? 'on-line' : '', href="#") #{tag.tag}
+            
+          p.program-short__excerpt #{item.short.excerpt}
+      
+    .program-full
+      .program-full__time
+        .program-full__date
+          span.day #{item.full.day}
+          span.date #{item.full.date}
+        
+        .program-full__time-switcher
+          a.control.before(href="#")
+            svg(xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", width="23", height="13", viewBox="0 0 23 13")
+              image(id="Shape_1_copy", data-name="Shape 1 copy", width="23", height="13", xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAANCAQAAADobj3WAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBR4RHiZyQr4+AAABCUlEQVQoz42QMShEARjHf/8XNwlJnTLIoLgrPTEoYmIwIYsi85VMNyhZbaYbZHYbyxkNZHITKXXUqyuLeqRLUSif4e5e7z0v3f/bvv+v//fvk0+CeijxwtJfw0mAXZ6U1iJHreBDlHm3SSuypoKITlsM7teNfWuEV1unyzZVYzdsK9K9Vx4pslTBAC41Y3n2k/EOVa2Tce5CAde45DgMuge9UjxYN7MRGCa414FWm5RjGIY5VOhjnnJwtj4/cnm0oi3UuWb6rQ2yzEXCW7/I8KxTpoFG+pVltaFS+GUhfWjY3nSuMSEfzphjiwL/KY2ndhuVf8wKO+zFfcUXA1TsU77HCdu0ooymfgHUd1EzSIs02QAAAABJRU5ErkJggg==")
+
+          span.time #{item.full.time}
+          
+          a.control.after(href="#")
+            svg(xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", width="23", height="13", viewBox="0 0 23 13")
+              image(id="Shape_1_copy_3", data-name="Shape 1 copy 3", width="23", height="13", xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAANCAQAAADobj3WAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBR4RIgGku3KqAAABFklEQVQoz42QLUiDYRSFnzOcQQwyhCX/guiciEsTBDFoXFhXzBabaLGJzaTFPMFimWFhRQaCKIOJBkHHwCDI54KIIBp2Da9z37sJetq957mHw1VQ5ZhN/qMJzXZRYYNXdv6EhyjzoQCKWmSNPd81f4xTVZQpBQDnStsKubCv8NBHjV5LU9GzW9xYkiz5X2v0UKNf85yBS4cI9xpmgdMOuNvuGCBDwWFODRL2ZEVmWt0NwyJ2pUEtqSCEfnD4ZEwvlJj0sssat1U7+j4O4fBmCXvn0kYMQwiVSNk6By0k4mXVSVpD14oLw05sTtvadTXayzg9krKo3RIjp4z22fLt5mfCmuZCDzbKIcvtVvPvvmLkrU620/gC4MFZsw91osgAAAAASUVORK5CYII=")
+
+      .program-full__container
+        .program-full__video
+          iframe(width="450", height="380", src="//ovva.tv/video/embed/eRIGWNJt", frameborder="0", allowfullscreen)
+          
+        .program-full__content
+          a.program-full__title(href="#") #{item.full.title}
+          p.program-full__sub-title #{item.full.subTitle}
+          
+          .program-full__cat
+            each cat in item.full.cat
+              a(href="#") #{cat}
+          
+          p.program-full__excerpt #{item.full.excerpt}
+          
+          .program-full__tags
+            each tag in item.full.tags
+              a(href="#") #{tag}
+      
+      button.program-full__close X

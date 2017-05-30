@@ -7,6 +7,29 @@
       background-color: $orange;
     }
   }
+  &.online {
+    .program-short__time {
+      .time {
+        color: $red;
+      }
+      .sign {
+        background-color: $red;
+      }
+    }
+    .program-short__tags a {
+      &.on-line {
+        background-color: $red;
+        color: $white;
+        &::before {
+          background-color: $white;
+        }
+      }
+    }
+    .program-short__title {
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
 
   &__time {
     @include flex(center, center, nowrap);
@@ -31,11 +54,36 @@
   }
 
   &__preview {
+    display: block;
+    width: 185px;
+    min-width: 185px;
     margin-right: 24px;
-  }
+    overflow: hidden;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 2;
+      @include trans();
+    }
+    &:hover {
+      &::before {
+        box-shadow: inset 0 0 0 3px $red;
+      }
+    }
 
-  &__content {
-    padding-top: 10px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   &__title {

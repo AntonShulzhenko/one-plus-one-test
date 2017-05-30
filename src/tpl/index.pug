@@ -15,60 +15,7 @@ html(lang="uk")
               a(class=item.active ? 'active' : '', href="#") #{item.link}
               
           .programs
-            .programs__item
-              .program-short.premiere
-                .program-short__time
-                  span.sign Прем'єра
-                  span.time 08:00
-                
-                .program-short__container
-                  a.program-short__preview(href="#")
-                    img(src="img/program-short.png", alt="Терпкий смак кохання")
-                      
-                  .program-short__content
-                    a.program-short__title(href="#") Терпкий смак кохання
-                    
-                    .program-short__tags
-                      a.on-line(href="#") Онлайн
-                      a(href="#") Повні випуски
-                      a(href="#") Останні новини
-                      
-                    p.program-short__excerpt У цій комедійно-політичній картині актори "Студії Квартал 95" і відомі українські артисти майстерно зіграли політиків.
-                
-              .program-full
-                .program-full__time
-                  .program-full__date
-                    span.day Вт
-                    span.date Сьогодні
-                  
-                  .program-full__time-switcher
-                    a.control.before(href="#")
-                    span.time 00:00
-                    a.control.after(href="#")
-                    
-                .program-full__container
-                  .program-full__video
-                    iframe(width="450", height="380", src="//ovva.tv/video/embed/eRIGWNJt", frameborder="0", allowfullscreen)
-                    
-                  .program-full__content
-                    a.program-full__title(href="#") Величне століття Роксолана
-                    p.program-full__sub-title 1 Сезон 5 випуск
-                    
-                    .program-full__cat
-                      a(href="#") Повні випуски
-                      a(href="#") Останні новини
-                    
-                    p.program-full__excerpt Постраждавши в результаті нещасного випадку, багатий аристократ Філіп наймає в помічники людину, що найменше підходить для цієї роботи, - жителя передмістя, чорношкірого Дрісса.
-                    
-                    .program-full__tags
-                      a(href="#") #Інспектор_фреймут
-                      a(href="#") #фреймут
-                      a(href="#") #Інспектор_фреймут
-                      a(href="#") #Новини_Інспектор_фреймут
-                      a(href="#") #фреймут
-                      a(href="#") #Інспектор_фреймут
-                
-                button.program-full__close X
+            include components/programs-item
       
       include sections/popular
     

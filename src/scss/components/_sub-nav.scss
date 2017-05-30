@@ -26,10 +26,19 @@
       &:active {
         background-color: $red;
         color: $white;
+        i {
+          path {
+            fill: $white;
+          }
+        }
       }
 
       i {
         margin-left: 5px;
+        path {
+          fill: $grey;
+          @include trans();
+        }
       }
     }
   }

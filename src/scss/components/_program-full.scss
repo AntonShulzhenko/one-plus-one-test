@@ -33,26 +33,13 @@
     flex-direction: column;
 
     .control {
-      display: block;
+      @include flex(center, center, nowrap);
+      flex-direction: column;
       width: 164px;
       height: 40px;
       border-radius: 4px;
       border: 1px solid #727272;
-      background: {
-        image: url(../img/arrows.png);
-        repeat: no-repeat;
-      }
       @include trans();
-      &.before {
-        background: {
-          position: top center;
-        }
-      }
-      &.after {
-        background: {
-          position: bottom center;
-        }
-      }
       &:hover {
         border-color: $white;
       }

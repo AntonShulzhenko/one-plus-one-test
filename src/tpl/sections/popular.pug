@@ -6,7 +6,7 @@ section.popular
       each link in popular
         div(class=link.lg ? 'popular__item popular-link popular-link_lg' : 'popular__item popular-link')
           .popular-link__img
-            a.popular-link__img-container(href="#")
+            a.popular-link__img-container.play(href="#")
               img(src=`${link.img}`, alt=`${link.title}`)
                 
             .popular-link__labels

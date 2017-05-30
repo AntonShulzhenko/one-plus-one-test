@@ -1,0 +1,22 @@
+.play {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba($white, .75);
+    border-radius: 2px;
+    background: {
+      image: url(../img/play.svg);
+      repeat: no-repeat;
+      position: center;
+      color: rgba($black, .5);
+    }
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -18px;
+    margin-top: -18px;
+  }
+}
