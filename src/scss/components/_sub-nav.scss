@@ -56,6 +56,7 @@
     margin: 0;
     padding: 0;
     background-color: $white;
+    border-top: 1px solid #d0d0d0;
     position: absolute;
     left: 0;
     top: 100%;
@@ -63,5 +64,18 @@
     opacity: 0;
     visibility: hidden;
     @include trans();
+    li {
+      &:last-child {
+        a {
+          color: $red;
+          font-weight: 900;
+          &:hover,
+          &:focus,
+          &:active {
+            color: $white;
+          }
+        }
+      }
+    }
   }
 }

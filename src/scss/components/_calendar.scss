@@ -127,7 +127,7 @@
     background: {
       color: transparent;
       repeat: no-repeat;
-      image: url(../img/arrows-calendar.png);
+      position: center;
     }
     @include trans();
     cursor: pointer;
@@ -144,11 +144,11 @@
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     background: {
-      position: top left;
+      image: url(../img/calendar-arr-prev-grey.png);
     }
     &:hover {
       background: {
-        position: top right;
+        image: url(../img/calendar-arr-prev.png);
       }
     }
   }
@@ -157,11 +157,11 @@
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     background: {
-      position: bottom right;
+      image: url(../img/calendar-arr-next-grey.png);
     }
     &:hover {
       background: {
-        position: bottom left;
+        image: url(../img/calendar-arr-next.png);
       }
     }
   }
