@@ -1,63 +1,88 @@
 header.header
-  .header__top
-    .header__left
-      a.header__logo(href="#") 1+1
+  .header__container
+    .header__top
+      .header__left
+        a.header__logo(href="#") 1+1
+        
+        nav.header__nav
+          ul
+            each li in haderNav
+              li
+                a.header__text(href="#") #{li}
+        
+      .header__right
+        .header__search.header__icon-block
+          span.icon
+            svg(xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13")
+              path(class="cls-1" d="M9.274,8.464a5.2,5.2,0,1,0-.764.772L12.235,13l0.771-.764ZM5.214,9.657A4.451,4.451,0,1,1,9.666,5.206,4.456,4.456,0,0,1,5.214,9.657Z")
+            
+          span.header__text.header__search-text Пошук
+          
+        .header__lang.header__icon-block.header__lang
+          span.icon
+            svg(xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", width="13", height="13", viewBox="0 0 13 13")
+              image(id="Vector_Smart_Object", data-name="Vector Smart Object", width="13", height="13", xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAQAAADY4iz3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBR4RJx3NzdqgAAAA+klEQVQY002QvyvEcQCGn891XTZfGXSJUbkyGNyVjJy77Sb5HyQmFos/QMpApItE0SmbUgZlcmUhTJSM0hU5d5cew9fJO7y9vcv7AwAw76H3PnnrkfnYS4ApN8nQYpILCnww4LopSAKrlGkQwrOEF6+5osoKswkLdJJmkXdL9FvikwXSdDmRYIoK0MNrnMAb3UCFadwG2rzzT5eDN5wDec7+uMgpMI4HRkbuGxn96j0jI3eTNKmHhl+hBjZDDfwONVO0gkWWuWOEW+qMcUkHQ1QZZAlwy5xZ5+Mazpgz60Y8eZY1bhi2D+xllAQZ5mjDgsc++OidJ+0PfwAbtXpxfAiNvwAAAABJRU5ErkJggg==")
+            
+          a.header__text.header__lang-item.active(href="#") Укр
+          
+          .header__lang-dropdown
+            .header__lang-dropdown-inner
+              a.header__text.header__lang-item(href="#") Укр
+              a.header__text.header__lang-item(href="#") Рус
+          
+        .header__auth.header__icon-block
+          span.icon
+            svg(xmlns="http://www.w3.org/2000/svg", width="13", height="13", viewBox="0 0 13 13")
+              path(class="cls-1", d="M237.5,12.971A6.486,6.486,0,1,1,244,6.5,6.491,6.491,0,0,1,237.5,12.971Zm0-12.354a5.868,5.868,0,1,0,5.91,5.887A5.9,5.9,0,0,0,237.5.617ZM237.5,13a7.943,7.943,0,0,1-4.771-2.115,0.348,0.348,0,0,1-.1-0.291,0.34,0.34,0,0,1,.167-0.255l2.673-1.508a6.181,6.181,0,0,1-.769-2.95c0-1.9,1.256-3.444,2.8-3.444s2.8,1.545,2.8,3.444a6.152,6.152,0,0,1-.78,2.963L242.2,10.3a0.339,0.339,0,0,1,.172.255,0.345,0.345,0,0,1-.1.294A8.059,8.059,0,0,1,237.5,13Zm-3.976-2.3c-0.652.388,2.71,1.739,3.976,1.739,1.24,0,4.631-1.506,3.977-1.769l-2.611-1.419A0.339,0.339,0,0,1,238.691,9a0.346,0.346,0,0,1,.1-0.294,4.891,4.891,0,0,0,.858-2.822c0-1.524-.965-2.765-2.15-2.765s-2.15,1.24-2.15,2.765a4.92,4.92,0,0,0,.843,2.807,0.35,0.35,0,0,1,.1.291,0.337,0.337,0,0,1-.167.255Z", transform="translate(-231)")
+            
+          a.header__text(href="#") Вхід
       
-      nav.header__nav
-        ul
-          each li in haderNav
+      form.search-form
+        input.search-form__input(type="search", placeholder="Почніть пошук...")
+        span.search-form__close x
+      
+    .header__bottom
+      ul.sub-nav
+        li.sub-nav__item
+          a(href="#") Програми
+            i
+              svg(xmlns="http://www.w3.org/2000/svg" width="12.937" height="9.906" viewBox="0 0 12.937 9.906")
+                path(id="Rectangle_43_copy_10" data-name="Rectangle 43 copy 10" class="cls-1" d="M312.051,16.031h2v0.988h-2V16.031Zm0,2.994h2v0.987h-2V19.025Zm0,2.963h2v0.988h-2V21.987Zm0,2.963h2v0.988h-2V24.95Zm3.994-8.919H325v0.988h-8.955V16.031Zm0,2.994H325v0.987h-8.955V19.025Zm0,2.963H325v0.988h-8.955V21.987Zm0,2.963H325v0.988h-8.955V24.95Z" transform="translate(-312.063 -16.031)")
+                  
+          ul.sub-nav__dropdown
             li
-              a.header__text(href="#") #{li}
-      
-    .header__right
-      .header__search.header__icon-block
-        span.icon
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
-            path(class="cls-1" d="M9.274,8.464a5.2,5.2,0,1,0-.764.772L12.235,13l0.771-.764ZM5.214,9.657A4.451,4.451,0,1,1,9.666,5.206,4.456,4.456,0,0,1,5.214,9.657Z")
-          
-        span.header__text.header__search-text Пошук
-        
-      .header__lang.header__icon-block
-        span.icon
-          svg(xmlns="http://www.w3.org/2000/svg", xmlns:xlink="http://www.w3.org/1999/xlink", width="13", height="13", viewBox="0 0 13 13")
-            image(id="Vector_Smart_Object", data-name="Vector Smart Object", width="13", height="13", xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAQAAADY4iz3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfhBR4RJx3NzdqgAAAA+klEQVQY002QvyvEcQCGn891XTZfGXSJUbkyGNyVjJy77Sb5HyQmFos/QMpApItE0SmbUgZlcmUhTJSM0hU5d5cew9fJO7y9vcv7AwAw76H3PnnrkfnYS4ApN8nQYpILCnww4LopSAKrlGkQwrOEF6+5osoKswkLdJJmkXdL9FvikwXSdDmRYIoK0MNrnMAb3UCFadwG2rzzT5eDN5wDec7+uMgpMI4HRkbuGxn96j0jI3eTNKmHhl+hBjZDDfwONVO0gkWWuWOEW+qMcUkHQ1QZZAlwy5xZ5+Mazpgz60Y8eZY1bhi2D+xllAQZ5mjDgsc++OidJ+0PfwAbtXpxfAiNvwAAAABJRU5ErkJggg==")
-          
-        a.header__text.header__lang-item.active(href="#") Укр
-        a.header__text.header__lang-item(href="#") Рус
-        
-      .header__auth.header__icon-block
-        span.icon
-          svg(xmlns="http://www.w3.org/2000/svg", width="13", height="13", viewBox="0 0 13 13")
-            path(class="cls-1", d="M237.5,12.971A6.486,6.486,0,1,1,244,6.5,6.491,6.491,0,0,1,237.5,12.971Zm0-12.354a5.868,5.868,0,1,0,5.91,5.887A5.9,5.9,0,0,0,237.5.617ZM237.5,13a7.943,7.943,0,0,1-4.771-2.115,0.348,0.348,0,0,1-.1-0.291,0.34,0.34,0,0,1,.167-0.255l2.673-1.508a6.181,6.181,0,0,1-.769-2.95c0-1.9,1.256-3.444,2.8-3.444s2.8,1.545,2.8,3.444a6.152,6.152,0,0,1-.78,2.963L242.2,10.3a0.339,0.339,0,0,1,.172.255,0.345,0.345,0,0,1-.1.294A8.059,8.059,0,0,1,237.5,13Zm-3.976-2.3c-0.652.388,2.71,1.739,3.976,1.739,1.24,0,4.631-1.506,3.977-1.769l-2.611-1.419A0.339,0.339,0,0,1,238.691,9a0.346,0.346,0,0,1,.1-0.294,4.891,4.891,0,0,0,.858-2.822c0-1.524-.965-2.765-2.15-2.765s-2.15,1.24-2.15,2.765a4.92,4.92,0,0,0,.843,2.807,0.35,0.35,0,0,1,.1.291,0.337,0.337,0,0,1-.167.255Z", transform="translate(-231)")
-          
-        a.header__text(href="#") Вхід
-    
-    form.search-form
-      input.search-form__input(type="text", placeholder="Почніть пошук...")
-      span.search-form__close x
-    
-  .header__bottom
-    ul.sub-nav
-      li.sub-nav__item
-        a(href="#") Програми
-          i
-            svg(xmlns="http://www.w3.org/2000/svg" width="12.937" height="9.906" viewBox="0 0 12.937 9.906")
-              path(id="Rectangle_43_copy_10" data-name="Rectangle 43 copy 10" class="cls-1" d="M312.051,16.031h2v0.988h-2V16.031Zm0,2.994h2v0.987h-2V19.025Zm0,2.963h2v0.988h-2V21.987Zm0,2.963h2v0.988h-2V24.95Zm3.994-8.919H325v0.988h-8.955V16.031Zm0,2.994H325v0.987h-8.955V19.025Zm0,2.963H325v0.988h-8.955V21.987Zm0,2.963H325v0.988h-8.955V24.95Z" transform="translate(-312.063 -16.031)")
-                
-      li.sub-nav__item
-        a(href="#") Серіали
-          i
-            svg(xmlns="http://www.w3.org/2000/svg" width="9.937" height="9.844" viewBox="0 0 9.937 9.844")
-              path(id="Rectangle_43_copy_9" data-name="Rectangle 43 copy 9" class="cls-1" d="M750.05,16.061h1.965v1.975H750.05V16.061Zm3.992,0h1.965v1.975h-1.965V16.061Zm3.993,0H760v1.975h-1.965V16.061Zm-7.985,3.92h1.965v1.975H750.05V19.981Zm3.992,0h1.965v1.975h-1.965V19.981Zm3.993,0H760v1.975h-1.965V19.981Zm-7.985,3.951h1.965v1.975H750.05V23.932Zm3.992,0h1.965v1.975h-1.965V23.932Zm3.993,0H760v1.975h-1.965V23.932Z" transform="translate(-750.063 -16.063)")
-                
-      li.sub-nav__item
-        a(href="#") Фільми
-          i
-            svg(xmlns="http://www.w3.org/2000/svg" width="12.84" height="9.906" viewBox="0 0 12.84 9.906")
-              path(id="Shape_32_copy_7" data-name="Shape 32 copy 7" class="cls-1" d="M1229.16,20.029V19.041h12.85v0.988h-12.85Zm0,5.937V24.979h12.85v0.988h-12.85Zm0-2.986V21.993h12.85V22.98h-12.85Zm0-5.913V16.078h12.85v0.988h-12.85Z" transform="translate(-1229.16 -16.063)")
-                
-      li.sub-nav__item
-        a(href="#") Ведучі
-          i
-            svg(xmlns="http://www.w3.org/2000/svg" width="10.81" height="10.281" viewBox="0 0 10.81 10.281")
-              path(id="Shape_32_copy_9" data-name="Shape 32 copy 9" class="cls-1" d="M1703.17,16.293l0.89-.235,5.22,9.834-0.7.46Zm5.86,10.059-0.73-.46,4.82-9.834,0.89,0.235Zm4.53-10.289v1.029h-9.94V16.063h9.94Z" transform="translate(-1703.19 -16.063)")
+              a(href="#") Test
+            li
+              a(href="#") Test
+            li
+              a(href="#") Test
+            li
+              a(href="#") Test
+                  
+        li.sub-nav__item
+          a(href="#") Серіали
+            i
+              svg(xmlns="http://www.w3.org/2000/svg" width="9.937" height="9.844" viewBox="0 0 9.937 9.844")
+                path(id="Rectangle_43_copy_9" data-name="Rectangle 43 copy 9" class="cls-1" d="M750.05,16.061h1.965v1.975H750.05V16.061Zm3.992,0h1.965v1.975h-1.965V16.061Zm3.993,0H760v1.975h-1.965V16.061Zm-7.985,3.92h1.965v1.975H750.05V19.981Zm3.992,0h1.965v1.975h-1.965V19.981Zm3.993,0H760v1.975h-1.965V19.981Zm-7.985,3.951h1.965v1.975H750.05V23.932Zm3.992,0h1.965v1.975h-1.965V23.932Zm3.993,0H760v1.975h-1.965V23.932Z" transform="translate(-750.063 -16.063)")
+                  
+          ul.sub-nav__dropdown
+            li
+              a(href="#") Test
+            li
+              a(href="#") Test
+            li
+              a(href="#") Test
+            li
+              a(href="#") Test
+                  
+        li.sub-nav__item
+          a(href="#") Фільми
+            i
+              svg(xmlns="http://www.w3.org/2000/svg" width="12.84" height="9.906" viewBox="0 0 12.84 9.906")
+                path(id="Shape_32_copy_7" data-name="Shape 32 copy 7" class="cls-1" d="M1229.16,20.029V19.041h12.85v0.988h-12.85Zm0,5.937V24.979h12.85v0.988h-12.85Zm0-2.986V21.993h12.85V22.98h-12.85Zm0-5.913V16.078h12.85v0.988h-12.85Z" transform="translate(-1229.16 -16.063)")
+                  
+        li.sub-nav__item
+          a(href="#") Ведучі
+            i
+              svg(xmlns="http://www.w3.org/2000/svg" width="10.81" height="10.281" viewBox="0 0 10.81 10.281")
+                path(id="Shape_32_copy_9" data-name="Shape 32 copy 9" class="cls-1" d="M1703.17,16.293l0.89-.235,5.22,9.834-0.7.46Zm5.86,10.059-0.73-.46,4.82-9.834,0.89,0.235Zm4.53-10.289v1.029h-9.94V16.063h9.94Z" transform="translate(-1703.19 -16.063)")
