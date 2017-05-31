@@ -3,6 +3,7 @@
   padding: 40px 104px 40px 0;
   background-color: $white;
   overflow: hidden;
+  @include trans();
   @media (max-width: 1440px) {
     padding: 20px 60px 20px 0;
   }

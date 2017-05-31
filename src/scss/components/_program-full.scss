@@ -4,6 +4,7 @@
   position: relative;
   overflow: hidden;
   height: 0;
+  @include trans();
   &.open {
     height: auto;
   }
